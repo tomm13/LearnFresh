@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+<style>
+
+body {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+img {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 1010px; 
+  height: 814px; 
+}
+
+.container {
+  width: 1500px; 
+  height: 820px; 
+  overflow: hidden; 
+}
+
+.imageContainer {
+  width: 68%;
+  height: 100%;
+  float:left;
+}
+
+.topContainer {
+  margin-top: 90px;
+  margin-bottom: 60px;
+}
+
+.loginContainer {
+  width: 32%;
+  height: 100%;
+  float: right;
+  text-align: center;
+  font-family: 'Inter';  
+  color: rgba(68, 68, 68, 1);
+}
+
+div.inputContainer div div{
+  text-align: center;
+  font-family: 'Poppins';
+  padding: 30px;  
+  color: rgba(68, 68, 68, 1);
+}
+
+.mainTitle {
+  font-weight: 500; 
+  font-size: 28px;
+}
+
+.subTitle {
+  font-weight: 375; 
+  font-size: 12px;
+}
+
+a:link {
+  color: rgba(152, 190, 89, 1);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+label {
+  display: block; 
+  margin-left: 36px;
+  margin-bottom: 8px; 
+  text-align: left;
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+
+label[for="checkbox"]{
+  font-size: 10px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{ 
+  width: calc(100% - 74px);
+  height: 30px;
+  padding: 12px; 
+  margin-bottom: 20px; 
+  border: 1px solid rgba(0, 0, 0, 1); 
+  border-radius: 16px; 
+  transition: border-color 0.3s ease;
+  font-size: 13px;
+  font-family: 'Poppins';
+}
+
+input[type="submit"] {
+  width: calc(100% - 50px);
+  height: 50px;
+  padding: 5px; 
+  border: 1px solid rgba(0, 0, 0, 1); 
+  border-radius: 16px; 
+  background-color: rgba(159, 200, 91, 1); 
+  color: rgba(0, 0, 0, 0.7); 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+  font-size: 17px;
+  font-family: 'Poppins';
+}
+
+input[type="checkbox"] {
+  width: 17px;
+  height: 13px;
+  background-color: rgba(159, 200, 91, 1); 
+  color: rgba(0, 0, 0, 0.7); 
+  cursor: pointer; 
+  margin-left: -4px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(159, 200, 91, 0.2);
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    border-color: rgba(229, 229, 229, 1);
+}
+
+hr.solid {
+  width: calc(100% - 74px);
+  border-top: 1px solid rgba(229, 229, 229, 1);
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.g_id_signin {
+  width: fill;
+  margin-left: 24px;
+  margin-right: 24px;
+  justify-content: center;
+  align-self: start;
+}
+
+.g_id_signin:focus {
+  outline: none; 
+}
+
+div.nsm7Bb-HzV7m-LgbsSe {
+  color: white;
+  background-color: rgba(51, 51, 51, 1);
+  transition: background-color 0.3s ease;
+  border: 0px;
+}
+
+div.nsm7Bb-HzV7m-LgbsSe:hover {
+  background-color: rgba(0, 116, 255, 0.8);
+}
+
+</style>
+
+</head>
+<div class="container">
+  <div class="imageContainer">
+    <div>
+      <img src="ricky.webp" width=100% height=100% >
+    </div>
+  </div>
+
+  <div class="loginContainer">
+    <div class="topContainer">
+      <p><span class="mainTitle">Create your account.</span></p>
+      <p><span class="subTitle">Already have an account? <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Sign In</a></span></p>
+    </div>
+    <div class="inputContainer">
+      <form>
+        <label for="full name">Full name:</label>
+        <input type="text" placeholder="Richard Mitchell">
+
+        <label for="email">Email address:</label>
+        <input type="email" placeholder="Example@email.com">
+
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Enter your password">
+        <i class="bi bi-eye-slash" id="togglePassword"></i>
+        
+        <label for="checkbox"><input type="checkbox">I have read and agree to the <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">terms and conditions</a></label> 
+       
+        <input type="submit" value="Sign up">
+    </div>
+    <hr class="solid">
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <div id="g_id_onload"
+        data-client_id="YOUR_GOOGLE_CLIENT_ID"
+        data-login_uri="https://your.domain/your_login_endpoint"
+        data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left">
+    </div>
+  </div>
+</div>
+</form>
+</head>
+</html>
+
